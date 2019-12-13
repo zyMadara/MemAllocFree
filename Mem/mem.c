@@ -4,7 +4,7 @@
 #define _MEM_SIZE_					((10u << 10) + (_MEM_HEAD_OFSET_ << 2))
 
 #define _MEM_IN_USE_				(0x8000u)
-#define _MEM_MIN_SIZE_				(4u)
+#define _MEM_MIN_SIZE_				(8u)
 #define _MEM_HEAD_OFSET_			(4u) //(sizeof(MemHdr_t))
 
 #define _MEM_ROUND_(x)				((((x) + _MEM_HEAD_OFSET_ - 1) / _MEM_HEAD_OFSET_) * _MEM_HEAD_OFSET_)
