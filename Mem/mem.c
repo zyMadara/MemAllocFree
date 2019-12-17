@@ -20,6 +20,10 @@
 #define _MEM_BIGBLK_BUCKET_			(_MEM_BIG_CNT_ * _MEM_BIG_SIZE_)
 
 
+#if (_MEM_MIN_SIZE_ <= _MEM_HEAD_OFSET_)
+#error "_MEM_MIN_SIZE_ has to more than _MEM_HEAD_OFSET_"
+#endif
+
 #if ((_MEM_BIGBLK_BUCKET_ + _MEM_SMALLBLK_BUCKET_) != (_MEM_SIZE_ - (_MEM_HEAD_OFSET_ << 2)))
 #error "Try to make best use of Heap"
 #endif
